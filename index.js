@@ -1,7 +1,12 @@
 var piTime=0;
 var st="次數：";
+var rd = Math.floor(Math.random()*2+1);
+var aud = "#piyan"+rd;
 $(document).ready(function () {
-    $("#bearjump").click(function (e) { 
+    $("#bearjump").click(function (e) {
+        rd=Math.floor(Math.random()*2+1);
+        aud="#piyan"+rd;
+        $(aud)[0].play();
         piTime+=1;
         st="次數："+piTime;
         $("#pi2").text(st);
